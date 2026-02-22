@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evril Store - Jual Beli Akun Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Background Utama */
+        body {
+            background-color: #003366;
+            /* Biru tua dasar */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        /* Header & Nama Toko */
+        .store-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .store-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 3px solid #00A8E8;
+            /* Biru muda */
+        }
+
+        .store-logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .store-name {
+            font-size: 28px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .store-tagline {
+            font-size: 16px;
+            color: #B3E5FC;
+            /* Biru muda muda */
+            margin-top: 5px;
+        }
+
+        /* Sosial Media Icons */
+        .social-icons {
+            margin: 15px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #00A8E8;
+        }
+
+        /* Banner Slider */
+        .banner-slider {
+            width: 90%;
+            max-width: 600px;
+            height: 180px;
+            background-color: #005599;
+            /* Biru tua muda */
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #00A8E8;
+        }
+
+        /* Tombol Utama */
+        .btn-container {
+            width: 90%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #003366, #005599);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #005599, #00A8E8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(90deg, #00A8E8, #B3E5FC);
+            color: #003366;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(90deg, #B3E5FC, #00A8E8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-wa {
+            background: linear-gradient(90deg, #25D366, #A4E9C6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-wa:hover {
+            background: linear-gradient(90deg, #A4E9C6, #25D366);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            color: #B3E5FC;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Toko -->
+    <div class="store-header">
+        <div class="store-logo">
+            <img src="pp.jpeg" alt="Logo Evril Store">
+        </div>
+        <h1 class="store-name">EVRIL STORE</h1>
+        <p class="store-tagline">Jual, Beli, Rental & Top Up Semua Game di Sini!</p>
+
+        <!-- Sosial Media -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/vrilkrtin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/evrilstore" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/evrilstore" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <!-- Banner Slider -->
+    <div class="banner-slider">
+        WEBSITE KHUSUS JUAL BELI & RENTAL AKUN GAME - AMAN & TERPERCAYA
+    </div>
+
+    <!-- Tombol Utama -->
+    <div class="btn-container">
+        <a href="beranda.html" class="btn btn-primary">Kembali ke beranda</a>
+        <a href="produk.html" class="btn btn-secondary">🎮 Beli/Rental Akun Game</a>
+        <a href="topup.html" class="btn btn-secondary">💎 Top Up Game Murah</a>
+        <a href="kontak.html" class="btn btn-primary">🤝 Daftar Reseller/Promotor</a>
+        <a href="testimoni.html" class="btn btn-primary">⭐ Testimoni Pembeli</a>
+        <a href="https://whatsapp.com/channel/0029VbAp3LHKWEKpSAbWIP3B" class="btn btn-wa"><i
+                class="fab fa-whatsapp"></i> WhatsApp saluran</a>
+        <a href="https://wa.me/6282115754702" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp owner</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Evril Store - Semua Hak Dilindungi
+    </footer>
+</body>
+
+</html>

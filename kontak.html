@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - evril Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tambah ikon dari Font Awesome agar mudah pakai -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        header {
+            background-color: #2d2d2d;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #070d7d;
+        }
+
+        nav {
+            background-color: #2d2d2d;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(234, 225, 225);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1f0778;
+        }
+
+        .contact-section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .store-profile {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .store-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #080671;
+        }
+
+        .store-name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .store-desc {
+            color: #b3b3b3;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .contact-details {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* Warna ikon sesuai contoh */
+        .email-icon {
+            background-color: #c0392b;
+        }
+
+        .phone-icon {
+            background-color: #160871;
+        }
+
+        .location-icon {
+            background-color: #3498db;
+        }
+
+        .social-icon {
+            background-color: #8e44ad;
+        }
+
+        .contact-text p {
+            line-height: 1.4;
+        }
+
+        .contact-text .label {
+            color: #b3b3b3;
+            font-size: 14px;
+        }
+
+        .contact-text .value {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .cookie-notice {
+            background-color: #2980b9;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #2d2d2d;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #220e7a;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>evril Store</h1>
+        <p>Top Up Game Murah & Cepat!</p>
+    </header>
+
+    <nav>
+        <a href="beranda.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <section class="contact-section">
+        <!-- Profil Toko -->
+        <div class="store-profile">
+            <!-- Ganti src dengan logo kamu sendiri -->
+            <img src="pp.jpeg" alt="Logo evril Store" class="store-logo">
+            <div class="store-name">evril Store</div>
+            <p class="store-desc">Toko digital terpercaya untuk top up game, item premium, dan layanan instan dengan
+                harga terbaik.</p>
+        </div>
+
+        <!-- Detail Kontak -->
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-envelope email-icon"></i>
+                <div class="contact-text">
+                    <p class="label">Email</p>
+                    <p class="value">kontak@evrilstore.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone phone-icon"></i>
+                <div class="contact-text">
+                    <p class="label">Telepon/WA</p>
+                    <p class="value">0821-1575-4702</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt location-icon"></i>
+                <div class="contact-text">
+                    <p class="label">Lokasi</p>
+                    <p class="value">BANDUNG KOTA</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fab fa-instagram social-icon"></i>
+                <div class="contact-text">
+                    <p class="label">Instagram</p>
+                    <p class="value">@Vrilkrtin</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifikasi Cookies -->
+        <div class="cookie-notice">
+            <p>Kami menggunakan cookies untuk meningkatkan pengalaman Anda. <a href="#"
+                    style="color: white; text-decoration: underline;">Pelajari lebih lanjut</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 evril Store - Semua Hak Dilindungi</p>
+    </footer>
+</body>
+
+</html>

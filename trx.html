@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Invoice - AblehObraStore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            /* Putih muda/krem kebiruan */
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: #003366;
+            /* Biru tua */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            width: 300px;
+        }
+
+        .nav-links a,
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .auth-links a:hover {
+            background-color: #336699;
+            /* Biru sedang */
+        }
+
+        /* Konten Utama */
+        .main-section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .main-section h1 {
+            color: #003366;
+            /* Biru tua */
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .main-section p {
+            color: #336699;
+            /* Biru sedang */
+            margin-bottom: 30px;
+        }
+
+        .invoice-form input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #b3d9ff;
+            /* Biru muda */
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn-check {
+            display: inline-block;
+            background-color: #003366;
+            /* Biru tua */
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn-check:hover {
+            background-color: #336699;
+            /* Biru sedang */
+        }
+
+        /* Footer (opsional) */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header dengan Navigasi -->
+    <header>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari Game atau Voucher">
+        </div>
+        <div class="nav-links">
+            <a href="topup.html">Top up</a>
+            <a href="#cek-transaksi">Cek Transaksi</a>
+            <a href="#leaderboard">Leaderboard</a>
+        </div>
+        <div class="auth-links">
+            <a href="masuk.html">Masuk</a>
+            <a href="daftar.html">Daftar</a>
+        </div>
+    </header>
+
+    <!-- Konten Utama Cek Invoice -->
+    <section class="main-section">
+        <h1>Cek Invoice Kamu dengan Mudah dan Cepat</h1>
+        <p>Masukkan nomor invoice kamu untuk melihat detail pembelian.</p>
+        <div class="invoice-form">
+            <input type="text" placeholder="Masukkan nomor invoice kamu di sini">
+            <a href="#hasil-invoice" class="btn-check">Cari Invoice</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AblehObraStore - Semua Hak Dilindungi</p>
+    </footer>
+</body>
+
+</html>

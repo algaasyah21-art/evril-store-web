@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evril Store - Toko Akun Game Digital Terpercaya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #0a3d62;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #273c75;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            margin: 1rem 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #3c6382;
+        }
+
+        .search-bar {
+            margin: 1rem 0;
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            min-width: 200px;
+        }
+
+        .search-bar a {
+            background-color: #38ada9;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0 4px 4px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar a:hover {
+            background-color: #2ebf91;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #273c75;
+            border-bottom: 2px solid #38ada9;
+            padding-bottom: 0.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            grid-auto-rows: auto;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: #d1e8f7;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #273c75;
+            margin-bottom: 1rem;
+        }
+
+        .btn-view {
+            display: block;
+            width: 100%;
+            background-color: #38ada9;
+            color: white;
+            text-align: center;
+            padding: 0.7rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: #273c75;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #273c75;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #38ada9;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar dengan Nama Evril Store -->
+    <nav>
+        <div class="logo">
+            <h1>evril store </h1>
+        </div>
+        <div class="nav-links">
+            <a href="beranda.html">Beranda</a>
+            <a href="produk.html">Produk</a>
+            <a href="kontak.html">Bantuan </a>
+            <a href="topup.html">Top up</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari di Evril Store: Akun Game, Skin...">
+            <a href="masuk.html">Masuk</a>
+        </div>
+    </nav>
+
+    <!-- Bagian Produk Evril Store -->
+    <div class="product-section" id="produk">
+        <h2 class="section-title">Koleksi akun rental evril store</h2>
+        <div class="product-grid">
+            <!-- Produk 1 Evril Store -->
+            <div class="product-card">
+                <img src="rental-1.jpeg" alt="Akun Mobile Legends R56 - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>FREE FIRE - Evril Store</h3>
+                    <p>Rp 1.550.000</p>
+                    <a href="detail-mlbb-r56.html" class="btn-view">Lihat Ditaill</a>
+                </div>
+            </div>
+
+            <!-- Produk 2 Evril Store -->
+            <div class="product-card">
+                <img src="rental-2.jpeg" alt="Akun Free Fire C24 - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>FREE FIRE C24 - Evril Store</h3>
+                    <p>Rp 2.000.000</p>
+                    <a href="detail-ff-c24.html" class="btn-view">Lihat Detail </a>
+                </div>
+            </div>
+
+            <!-- Produk 3 Evril Store -->
+            <div class="product-card">
+                <img src="rental-3.jpeg" alt="Akun Free Fire V1856 - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>FREE FIRE V1856 - Evril Store</h3>
+                    <p>Rp 1.550.000</p>
+                    <a href="detail-ff-v1856.html" class="btn-view">Lihat Detail </a>
+                </div>
+            </div>
+
+            <!-- Produk 4 Evril Store -->
+            <div class="product-card">
+                <img src="remtal-4.jpeg" alt="Akun Free Fire V1803 - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>FREE FIRE V1803 - Evril Store</h3>
+                    <p>Rp 5.500.000</p>
+                    <a href="detail-ff-v1803.html" class="btn-view">Lihat Detail </a>
+                </div>
+            </div>
+
+            <!-- Produk 5 Evril Store -->
+            <div class="product-card">
+                <img src="rental-5.jpeg" alt="Akun Mobile Legends Pelajar - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>STOCK PELAJAR MLBB - Evril Store</h3>
+                    <p>Rp 800.000</p>
+                    <a href="detail-pelajal" class="btn-view">Lihat Detail </a>
+                </div>
+            </div>
+
+            <!-- Produk 6 Evril Store -->
+            <div class="product-card">
+                <img src="rental-6.jpeg" alt="Akun Free Fire Pelajar - Evril Store" class="product-img">
+                <div class="product-info">
+                    <h3>STOCK PELAJAR MOBALE LEGENS - Evril Store</h3>
+                    <p>Rp 750.000</p>
+                    <a href="detail-pelajar-ff.html" class="btn-view">Lihat Detail Evril </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Evril Store -->
+    <footer>
+        <p>&copy; 2026 Evril Store - Toko Akun Game Digital Terpercaya | Semua Hak Dilindungi</p>
+        <div style="margin-top: 0.5rem;">
+            <a href="syarat-ketentuan.html">Syarat & Ketentuan Evril Store</a>
+            <a href="kebijakan-privasi.html">Kebijakan Privasi Evril Store</a>
+            <a href="kontak.html">Hubungi Evril Store</a>
+        </div>
+    </footer>
+</body>
+
+</html>

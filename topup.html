@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evril store.id- Top Up & Joki Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            /* Warna dasar putih */
+            color: #0d47a1;
+            /* Biru tua utama */
+            line-height: 1.5;
+        }
+
+        /* Header Utama */
+        header {
+            background-color: #1565c0;
+            /* Biru tua */
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* Logo Area */
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #bbdefb;
+            /* Biru muda */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1565c0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Search Bar */
+        .search-container {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 25px;
+            background-color: #bbdefb;
+            color: #0d47a1;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: #0d47a1;
+            opacity: 0.7;
+        }
+
+        /* User & Nav Menu */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .auth-links a,
+        .main-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+
+        .auth-links a:hover,
+        .main-menu a:hover {
+            background-color: #bbdefb;
+            color: #1565c0;
+        }
+
+        .btn-login {
+            background-color: #ffffff;
+            color: #1565c0 !important;
+            font-weight: bold;
+        }
+
+        .btn-register {
+            border: 2px solid #ffffff;
+        }
+
+        /* Menu Navigasi Utama */
+        .main-nav-bar {
+            background-color: #bbdefb;
+            padding: 12px 20px;
+            border-bottom: 3px solid #1565c0;
+        }
+
+        .main-menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .main-menu a {
+            color: #0d47a1;
+            font-weight: 500;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .main-menu a:hover,
+        .main-menu a.active {
+            border-bottom: 3px solid #1565c0;
+            background-color: transparent;
+        }
+
+        /* Banner Website */
+        .site-banner {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #1565c0;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .banner-text {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .banner-text a {
+            color: #bbdefb;
+            text-decoration: underline;
+        }
+
+        .banner-text a:hover {
+            color: #ffffff;
+        }
+
+        /* Flash Sale Section */
+        .flash-sale-section {
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #1565c0;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .countdown {
+            background-color: #bbdefb;
+            padding: 5px 12px;
+            border-radius: 8px;
+            color: #1565c0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .flash-sale-grid {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+        }
+
+        .sale-card {
+            flex: 0 0 auto;
+            width: 200px;
+            background-color: #bbdefb;
+            border: 2px solid #1565c0;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .ribbon-tag {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background-color: #1565c0;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            transform: rotate(-8deg);
+        }
+
+        .sale-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sale-icon img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+        }
+
+        .sale-card h4 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .sale-card p {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Popular Games Section */
+        .popular-games-section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background-color: #bbdefb;
+            border: 2px solid #1565c0;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            color: #0d47a1;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            background-color: #90caf9;
+        }
+
+        .game-icon {
+            width: 55px;
+            height: 55px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-details h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .game-details p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-container {
+                max-width: 100%;
+            }
+
+            .main-menu {
+                gap: 15px;
+                overflow-x: auto;
+                padding-bottom: 8px;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Utama -->
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <div class="logo-text">evril store</div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Cari Game, Voucher, atau Layanan...">
+            </div>
+
+            <!-- Tautan Masuk & Daftar -->
+            <div class="top-nav auth-links">
+                <a href="masuk.html" class="btn-login">Masuk</a>
+                <a href="daftar.html" class="btn-register">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Navigasi Utama -->
+    <nav class="main-nav-bar">
+        <div class="main-menu">
+            <a href="beranda.html">beranda</a>
+            <a href="trx.html">Cek Transaksi</a>
+            <a href="produk.html">produk</a>
+        </div>
+    </nav>
+
+    <!-- Banner Website -->
+    <div class="site-banner">
+        <div class="banner-text">
+            <span>TIKTOK ADMIN</span>
+            <a href="https://www.tiktok.com/@2x7ea?is_from_webapp=1&sender_device=pc"
+                target="_blank">www.tiktok@2x7ea.com</a>
+            <span>INSTAGRAM RIAL ADMIN</span>
+            <a href="https://www.instagram.com/vrilkrtin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">www.instagram/vrilkrtin.com</a>
+        </div>
+    </div>
+
+    <!-- Bagian Flash Sale -->
+    <section class="flash-sale-section">
+        <div class="section-header">
+            <h2 class="section-title">FLASH SALE</h2>
+            <div class="countdown">43 : 12 : 24 : 6</div>
+        </div>
+        <div class="flash-sale-grid">
+            <div class="sale-card">
+                <div class="ribbon-tag">DISKON</div>
+                <div class="sale-icon">
+                    <img src="logo-dm.jpeg" alt="Free Fire">
+                </div>
+                <h4>FF VIA LOGIN</h4>
+                <p>MEMBERSHIP MINGGUAN CSGO</p>
+            </div>
+            <div class="sale-card">
+                <div class="ribbon-tag">DISKON</div>
+                <div class="sale-icon">
+                    <img src="logo-dm-kuning.jpeg" alt="Free Fire">
+                </div>
+                <h4>FF VIA LOGIN</h4>
+                <p>MEMBERSHIP MINGGUAN CSGO</p>
+            </div>
+            <div class="sale-card">
+                <div class="ribbon-tag">DISKON</div>
+                <div class="sale-icon">
+                    <img src="logo-dm.jpeg" alt="Mobile Legends">
+                </div>
+                <h4>ML VIA LOGIN</h4>
+                <p>1430 DIAMONDS</p>
+            </div>
+            <div class="sale-card">
+                <div class="ribbon-tag">DISKON</div>
+                <div class="sale-icon">
+                    <img src="logo-dm-kuning.jpeg" alt="Mobile Legends">
+                </div>
+                <h4>ML VIA LOGIN</h4>
+                <p>4000 DIAMONDS</p>
+            </div>
+            <div class="sale-card">
+                <div class="ribbon-tag">DISKON</div>
+                <div class="sale-icon">
+                    <img src="logo-dm.jpeg" alt="Mobile Legends">
+                </div>
+                <h4>ML VIA LOGIN</h4>
+                <p>1230 DIAMONDS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Populer Sekarang -->
+    <section class="popular-games-section">
+        <h2 class="section-title">POPULER SEKARANG!</h2>
+        <div class="games-grid">
+            <a href="topupff.html" class="game-card">
+                <div class="game-icon">
+                    <img src="loga-ff.jpeg" alt="Free Fire">
+                </div>
+                <div class="game-details">
+                    <h4>FF VIA ID / FF MAX VIA ...</h4>
+                    <p>Garena</p>
+                </div>
+            </a>
+            <a href="topupml.html" class="game-card">
+                <div class="game-icon">
+                    <img src="logo-ml.jpeg" alt="Mobile Legends">
+                </div>
+                <div class="game-details">
+                    <h4>MOBILE LEGENDS</h4>
+                    <p>Moonton</p>
+                </div>
+            </a>
+            <a href="topupml.html" class="game-card">
+                <div class="game-icon">
+                    <img src="logo-ml.jpeg" alt="Mobile Legends">
+                </div>
+                <div class="game-details">
+                    <h4>ML VIA LOGIN</h4>
+                    <p>PARTNER RESMI</p>
+                </div>
+            </a>
+            <a href="topupmc.html" class="game-card">
+                <div class="game-icon">
+                    <img src="logo-mc.jpeg" alt="Magic Chess">
+                </div>
+                <div class="game-details">
+                    <h4>Magic Chess: Go Ge</h4>
+                    <p>Viva Games</p>
+                </div>
+            </a>
+            <a href="joki.html" class="game-card">
+                <div class="game-icon">
+                    <img src="loga-ff.jpeg" alt="Free Fire">
+                </div>
+                <div class="game-details">
+                    <h4>JOKI RANK FREE FIRE</h4>
+                    <p>FREE FIRE</p>
+                </div>
+            </a>
+            <a href="topupff.html"

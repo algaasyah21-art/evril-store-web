@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evril Store - Daftar Akun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            /* Putih dengan nuansa biru muda */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        /* Container Utama - Sama persis struktur referensi */
+        .register-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #004499;
+            /* Biru tua dasar */
+            padding: 2.5rem 2rem;
+            color: white;
+        }
+
+        /* Tombol Tutup */
+        .close-btn {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .close-btn a {
+            color: #66b3ff;
+            /* Biru muda */
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .close-btn a:hover {
+            color: white;
+        }
+
+        /* Header Form */
+        .form-header h1 {
+            font-size: 1.8rem;
+            color: #66b3ff;
+            /* Biru muda */
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.8rem;
+        }
+
+        /* Label Input */
+        .form-label {
+            font-size: 0.85rem;
+            color: #66b3ff;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        /* Baris Input Dua Kolom */
+        .two-col-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .two-col-group .input-field {
+            width: 50%;
+        }
+
+        /* Baris Input Satu Kolom */
+        .one-col-group {
+            margin-bottom: 1rem;
+        }
+
+        .one-col-group .input-field {
+            width: 100%;
+        }
+
+        /* Baris Nomor WhatsApp */
+        .whatsapp-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .flag-box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #66b3ff;
+            border-radius: 4px 0 0 4px;
+            padding: 0.55rem 0.5rem;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-group .input-field {
+            border-radius: 0 4px 4px 0;
+            width: calc(100% - 60px);
+        }
+
+        /* Input Field Umum */
+        .input-field {
+            padding: 0.55rem;
+            border: 1px solid #66b3ff;
+            border-radius: 4px;
+            background-color: white;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+
+        .input-field::placeholder {
+            color: #999;
+        }
+
+        /* Baris Kata Sandi */
+        .password-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .password-col {
+            position: relative;
+            width: 50%;
+        }
+
+        .show-pass-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show-pass-btn a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .show-pass-btn a:hover {
+            color: #66b3ff;
+        }
+
+        /* Checkbox Syarat */
+        .terms-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        .terms-group input {
+            width: auto;
+        }
+
+        .terms-group a {
+            color: #66b3ff;
+            text-decoration: none;
+        }
+
+        .terms-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tombol Daftar */
+        .register-button {
+            width: 100%;
+            padding: 0.55rem;
+            background-color: white;
+            border: 1px solid #66b3ff;
+            border-radius: 4px;
+            color: #003366;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .register-button a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .register-button:hover {
+            background-color: #66b3ff;
+            color: white;
+            border-color: white;
+        }
+
+        /* Link Masuk */
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .login-link a {
+            color: #66b3ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <!-- Tombol Tutup -->
+        <div class="close-btn">
+            <a href="topup.html">×</a>
+        </div>
+
+        <!-- Header Form -->
+        <div class="form-header">
+            <h1>Daftar</h1>
+            <p>Masukkan informasi pendaftaran yang valid.</p>
+        </div>
+
+        <!-- Baris Nama Lengkap & Username -->
+        <div class="two-col-group">
+            <input type="text" class="input-field" placeholder="Nama lengkap">
+            <input type="text" class="input-field" placeholder="Username">
+        </div>
+
+        <!-- Baris Alamat Email -->
+        <div class="one-col-group">
+            <input type="email" class="input-field" placeholder="Alamat email">
+        </div>
+
+        <!-- Baris Nomor WhatsApp -->
+        <div class="whatsapp-group">
+            <div class="flag-box">🇮🇩 +62</div>
+            <input type="tel" class="input-field" placeholder="Nomor whatsapp">
+        </div>
+
+        <!-- Baris Kata Sandi & Konfirmasi -->
+        <div class="password-group">
+            <div class="password-col">
+                <input type="password" class="input-field" placeholder="Kata sandi">
+                <button class="show-pass-btn"><a href="#show-password">👁️</a></button>
+            </div>
+            <div class="password-col">
+                <input type="password" class="input-field" placeholder="Konfirmasi kata sandi">
+                <button class="show-pass-btn"><a href="#show-confirm-password">👁️</a></button>
+            </div>
+        </div>
+
+        <!-- Checkbox Syarat -->
+        <div class="terms-group">
+            <input type="checkbox" id="terms">
+            <label for="terms">Saya setuju dengan <a href="#syarat-ketentuan">Syarat dan Ketentuan</a> dan <a
+                    href="#kebijakan-privasi">Kebijakan Privasi</a></label>
+        </div>
+
+        <!-- Tombol Daftar -->
+        <button class="register-button">
+            <a href="#proses-daftar"><span>🔒</span> Daftar</a>
+        </button>
+
+        <!-- Link Masuk -->
+        <div class="login-link">
+            Sudah memiliki akun? <a href="#halaman-masuk">Masuk</a>
+        </div>
+    </div>
+</body>

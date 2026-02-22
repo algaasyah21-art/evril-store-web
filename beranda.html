@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evril Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #003366;
+            /* Biru tua */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 20px;
+            width: 250px;
+        }
+
+        /* Header/Banner */
+        header {
+            background-color: white;
+            /* Ganti dengan gambar jika diinginkan: */
+            background: url('bener.jpeg') no-repeat center center/cover;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .store-name {
+            color: #003366;
+            /* Biru tua */
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .main-title {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Tombol */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: #003366;
+            /* Biru tua */
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            min-width: 200px;
+        }
+
+        .btn:hover {
+            background-color: #005599;
+            /* Biru muda sedikit lebih terang */
+        }
+
+        .btn-topup {
+            background-color: #005599;
+            /* Biru muda */
+        }
+
+        .btn-topup:hover {
+            background-color: #0066cc;
+        }
+
+        /* Footer/Cookie Bar */
+        .cookie-bar {
+            background-color: #003366;
+            /* Biru tua */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-links">
+            <a href="produk.html">Produk</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="trx.html">cek transaksi</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Cari akun, game, produk...">
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <header>
+        <div class="store-name"></div>
+        <h1 class="main-title"></h1>
+        <p class="subtitle"></p>
+
+        <div class="btn-group">
+            <a href="topup.html" class="btn btn-topup">Top Up Semua Game - Murah!</a>
+            <div style="display: flex; gap: 15px;">
+                <a href="produk.html" class="btn">Lihat Stok</a>
+                <a href="jualbeli.html" class="btn">Jual Akunmu</a>
+            </div>
+            <a href="https://link-nomor-resmi.com" class="btn">Nomor Resmi</a>
+        </div>
+    </header>
+
+    <!-- Cookie Bar -->
+    <div class="cookie-bar">
+        Kami menggunakan cookies analytics dan marketing. <a href="#kebijakan-privasi" style="color: #aaccff;">Kebijakan
+            Privasi</a>
+    </div>
+</body>
+
+</html>

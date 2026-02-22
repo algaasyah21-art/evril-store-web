@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evril Store - Produk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f2b48;
+            /* Biru tua gelap */
+            color: #f0f8ff;
+            /* Putih kebiruan */
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3799;
+            /* Biru tua */
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #38ada9;
+            /* Biru muda */
+        }
+
+        .store-name a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .main-nav a.active {
+            background-color: #38ada9;
+            color: white;
+        }
+
+        .main-nav a:hover {
+            background-color: #3c6382;
+            /* Biru tua lebih muda */
+        }
+
+        .search-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-actions input[type="text"] {
+            padding: 7px;
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+            outline: none;
+        }
+
+        .action-icons a {
+            color: white;
+            text-decoration: none;
+            margin-left: 8px;
+            font-size: 1.1rem;
+        }
+
+        .login-link a {
+            background-color: #38ada9;
+            color: white;
+            padding: 7px 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .login-link a:hover {
+            background-color: #22a6b3;
+            /* Biru muda lebih tua */
+        }
+
+        /* Katalog Section */
+        .catalog-section {
+            padding: 20px;
+        }
+
+        .catalog-header {
+            margin-bottom: 20px;
+        }
+
+        .catalog-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #38ada9;
+        }
+
+        .catalog-search input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #38ada9;
+            border-radius: 4px;
+            background-color: white;
+            color: #0a3d62;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        /* Game Filters */
+        .game-filters a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .game-filters a.active {
+            background-color: #38ada9;
+            color: white;
+        }
+
+        .game-filters a {
+            background-color: white;
+            color: #1e3799;
+        }
+
+        .game-filters a:hover {
+            background-color: #d1e8f7;
+        }
+
+        /* Advanced Filters */
+        .advanced-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .advanced-filters select,
+        .advanced-filters a {
+            padding: 8px 12px;
+            border: 1px solid #38ada9;
+            border-radius: 4px;
+            background-color: white;
+            color: #1e3799;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .advanced-filters select:hover,
+        .advanced-filters a:hover {
+            background-color: #1e3799;
+            color: white;
+            border-color: #1e3799;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 2px solid #38ada9;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 10px rgba(56, 173, 169, 0.3);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-card a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            color: #1e3799;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .product-card a:hover {
+            background-color: #38ada9;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="store-name">
+            <a href="index.html">evril store</a>
+        </div>
+        <div class="main-nav">
+            <a href="beranda.html">Beranda</a>
+            <a href="produk.html">produk</a>
+            <a href="trx.html">cek transaksi</a>
+            <a href="kontak.html">Bantuan</a>
+        </div>
+        <div class="search-actions">
+            <input type="text" placeholder="Cari akun, game, produk...">
+            <div class="action-icons">
+                <a href="wishlist.html">❤️</a>
+                <a href="keranjang.html">🛒</a>
+            </div>
+            <div class="login-link">
+                <a href="masuk.html">Masuk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Katalog Produk -->
+    <section class="catalog-section">
+        <div class="catalog-header">
+            <h2>daftar stok akun fresh</h2>
+            <div class="catalog-search">
+                <input type="text" placeholder="Cari produk, game, atau kategori...">
+            </div>
+        </div>
+
+        <!-- Filter Game -->
+        <div class="game-filters">
+            <a href="produk.html" class="active">Semua Game</a>
+            <a href="web rental.html">Rental akun </a>
+            <a href="produk ml.html">Mobile Legends</a>
+            <a href="free-fire.html">Free Fire</a>
+        </div>
+
+        <!-- Filter Lanjutan -->
+        <div class="advanced-filters">
+            <select name="kategori">
+                <option value="">Kategori</option>
+                <option value="akun-game">Akun Game</option>
+                <option value="web">Rental Akun</option>
+                <a href="web rental.html"></a>
+            </select>
+            <select name="tipe">
+                <option value="">Tipe</option>
+                <option value="murah">Harga Murah</option>
+                <option value="premium">Akun Premium</option>
+            </select>
+            <a href="terbaru.html">Terbaru</a>
+            <a href="terlaris.html">Terlaris</a>
+            <a href="rental.html">Rental</a>
+        </div>
+
+        <!-- Grid Produk -->
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="stok-1.jpeg" alt="Akun Game 1">
+                <a href="data stok 1.html"> KLIK UNTUK BELI
+                    STOCK AKUN - Rp 2.800.000</a>
+            </div>
+            <div class="product-card">
+                <img src="stok-4.jpeg" alt="Akun Game 2">
+                <a href="data stok2.html"> KLIK UNTUK BELI
+                    STOCK AKUN - Rp 1.150.000</a>
+            </div>
+            <div class="product-card">
+                <img src="stok-2.jpeg" alt="Akun Game 3">
+                <a href="data stak 3.html"> KLIK UNTUK BELI
+                    STOCK AKUN - Rp 5.500.000</a>
+            </div>
+            <div class="product-card">
+                <img src="stok-3.jpeg" alt="Akun Game 4">
+                <a href="data stok 44.html"> KLIK UNTUK BELI
+                    STOCK AKUN - Rp 4.700.000</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
